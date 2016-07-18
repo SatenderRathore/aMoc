@@ -1,0 +1,55 @@
+<html>
+<head>
+<script>
+
+ini = setInterval(initiate,1000);
+
+function initiate()
+{
+	var xmlhttp = new XMLHttpRequest();
+	url = '../../timestamp.json';
+	xmlhttp.onreadystatechange = function()
+	{
+		if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+		{
+			var pres = new Date();
+			var info = JSON.parse(xmlhttp.responseText);
+			var set = new Date(info.year,info.month-1,info.day,info.hour,info.min,info.sec);
+			console.log(set);
+			console.log(pres);
+			if(pres.getTime() > set.getTime())
+			{
+				console.log(info);
+				alert("Yes");
+				document.write("Trigger starts!!");
+				clearInterval(ini);
+				setInterval(trigger,60000);
+			}
+		}
+	}
+	xmlhttp.open("GET",url,true);
+	xmlhttp.send();
+}
+
+function trigger()
+{
+	var xmlhttp = new XMLHttpRequest();
+	url = "../serpro.php?";
+	xmlhttp.onreadystatechange = function()
+	{
+		if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+		{
+			//alert("hey");
+			var info = JSON.parse(xmlhttp.responseText);
+			document.write(info.m);
+		}
+	}
+
+	xmlhttp.open("GET",url,true);
+	xmlhttp.send();
+}
+</script>
+</head>
+<body>
+</body>
+</html>

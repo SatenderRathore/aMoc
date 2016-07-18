@@ -1,0 +1,13 @@
+
+body{
+	height: 643px;
+	background-image: url("../images/main.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+.buttons{
+	margin-top: 28%;
+	margin-left: 8%;
+}
