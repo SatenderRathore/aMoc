@@ -25,8 +25,8 @@ if(isset($_POST['submit']))
         $contact = mysqli_escape_string($conn,$_POST['contact']);// Turn our post into a local variable
 
         //some formate for email
-        if(eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email))
-        {
+        // if(eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email))
+        // {
           //query to check if user is eligible for signup
           //all_details database
           $sql_query= "SELECT u_name ,adm_no FROM all_details WHERE email_id = '$email'";
@@ -49,30 +49,15 @@ if(isset($_POST['submit']))
 
               //echo "$msg";
 
-              $hash = md5( rand(0,1000) ); // Generate random 32 character hash and assign it to a local variable.
-                  // Example output: f4552671f8909587cf485ea990207f3b
-
-              //$password = rand(100000,5000000000); // Generate random number between 1000 and 5000 and assign it to a local variable.
-                  // Example output: 4568
-              //insert users details in details database
-              $insert_query = "INSERT INTO details (u_name, password, email, hash,adm_no,contact) VALUES(
-              '". mysqli_escape_string($conn,$name) ."',
-              '". mysqli_escape_string($conn,md5($password)) ."',
-              '". mysqli_escape_string($conn,$email) ."',
-              '". mysqli_escape_string($conn,$hash) ."',
-              '". mysqli_escape_string($conn,$adm_no) ."',
-              '". mysqli_escape_string($conn,$contact) ."') ";
-
-               mysqli_query($conn,$insert_query) or die(mysqli_error());
-
-               $plan_query = "INSERT INTO plan (adm_no)VALUES('$adm_no')";
-               mysqli_query($conn,$plan_query);
+              
 
                //send a email
               /*
                $to      = $email; // Send email to our user
               $subject = 'Signup | Verification'; // Give the email a subject
               */
+              $hash = md5( rand(0,1000) ); // Generate random 32 character hash and assign it to a local variable.
+                      // Example output: f4552671f8909587cf485ea990207f3b
               $message_to_send =
               '
               Thanks for signing up!
@@ -96,6 +81,26 @@ if(isset($_POST['submit']))
 
               if($mailsend==1)
               {
+                  
+
+                  //$password = rand(100000,5000000000); // Generate random number between 1000 and 5000 and assign it to a local variable.
+                      // Example output: 4568
+                  //insert users details in details database
+                  $insert_query = "INSERT INTO details (u_name, password, email, hash,adm_no,contact) VALUES(
+                  '". mysqli_escape_string($conn,$name) ."',
+                  '". mysqli_escape_string($conn,md5($password)) ."',
+                  '". mysqli_escape_string($conn,$email) ."',
+                  '". mysqli_escape_string($conn,$hash) ."',
+                  '". mysqli_escape_string($conn,$adm_no) ."',
+                  '". mysqli_escape_string($conn,$contact) ."') ";
+
+                   mysqli_query($conn,$insert_query) or die(mysqli_error());
+
+                   $plan_query = "INSERT INTO plan (adm_no)VALUES('$adm_no')";
+                   mysqli_query($conn,$plan_query);
+
+
+
                 ?>
                 <script>
                 var message = "Your account has been made,Please verify it by clicking the activation link that has been send to your email.";
@@ -126,18 +131,18 @@ if(isset($_POST['submit']))
            <?php
            //header("Location: register_not_eligible.php");
           }
-        }
+        // }
 
-        else
-        {
-            //else part if email dont match the requirments
-         ?>
+        // else
+        // {
+        //     //else part if email dont match the requirments
+        //  ?>
 
-            <script> alert('Wrong email id.'); window.location.href = "index.php";</script>';
-         <?php
+             <script> //alert('Wrong email id.'); window.location.href = "index.php";</script>';
+          <?php
 
-            //header("Location: register_wrong_email.php");
-        }
+        //     //header("Location: register_wrong_email.php");
+        // }
 
     }
 
