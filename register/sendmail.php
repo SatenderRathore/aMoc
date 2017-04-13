@@ -11,7 +11,7 @@
     $mail->CharSet = 'UTF-8';
     $body             = $message;
     $mail->IsSMTP();
-    $mail->Host       = "ssl://smtp.gmail.com";
+    $mail->Host       = "smtp.gmail.com";
     $mail->SMTPAuth   = true;
     $mail->Port       = 465;
     $mail->Username   = "roomjugaad@gmail.com";
