@@ -6,8 +6,8 @@ if(isset($_POST["submit"]))
 session_start();
 
 {
-    $adm_no=mysql_real_escape_string($_POST["adm_no"]);
-    $pass=mysql_real_escape_string($_POST["password"]);
+    $adm_no=$_POST["adm_no"];
+    $pass=$_POST["password"];
     $pass = md5($pass);
      //query for login
      $query = "SELECT adm_no FROM details WHERE adm_no='$adm_no' AND password='$pass' AND active = '1'";
