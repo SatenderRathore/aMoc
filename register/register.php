@@ -68,8 +68,8 @@ if(isset($_POST['submit']))
               $to       =   $email;//user's email id
               $subject  =   "SignUp | Verification";
               $message  =   $message_to_send;
-              $name     =   "Svnit Surat";
-              $mailsend =   sendmail($to,$subject,$message,$name);
+              $clg_name     =   "Svnit Surat";
+              $mailsend =   sendmail($to,$subject,$message,$clg_name);
 
               if($mailsend==1)
               {
@@ -123,18 +123,7 @@ if(isset($_POST['submit']))
            <?php
            //header("Location: register_not_eligible.php");
           }
-        // }
-
-        // else
-        // {
-        //     //else part if email dont match the requirments
-        //  ?>
-
-             <script> //alert('Wrong email id.'); window.location.href = "index.php";</script>';
-          <?php
-
-        //     //header("Location: register_wrong_email.php");
-        // }
+        
 
     }
 

@@ -8,6 +8,7 @@
   function sendmail($to,$subject,$message,$name)
   {
     $mail             = new PHPMailer();
+    
     $mail->CharSet = 'UTF-8';
     $body             = $message;
     $mail->IsSMTP();
