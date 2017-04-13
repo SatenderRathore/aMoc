@@ -73,26 +73,21 @@ if(isset($_POST['submit']))
 
               if($mailsend==1)
               {
-                  
+                //$password = rand(100000,5000000000); // Generate random number between 1000 and 5000 and assign it to a local variable.
+                    // Example output: 4568
+                //insert users details in details database
+                $insert_query = "INSERT INTO details (u_name, password, email, hash,adm_no,contact) VALUES(
+                '". mysqli_escape_string($conn,$name) ."',
+                '". mysqli_escape_string($conn,md5($password)) ."',
+                '". mysqli_escape_string($conn,$email) ."',
+                '". mysqli_escape_string($conn,$hash) ."',
+                '". mysqli_escape_string($conn,$adm_no) ."',
+                '". mysqli_escape_string($conn,$contact) ."') ";
 
-                  //$password = rand(100000,5000000000); // Generate random number between 1000 and 5000 and assign it to a local variable.
-                      // Example output: 4568
-                  //insert users details in details database
-                  $insert_query = "INSERT INTO details (u_name, password, email, hash,adm_no,contact) VALUES(
-                  '". mysqli_escape_string($conn,$name) ."',
-                  '". mysqli_escape_string($conn,md5($password)) ."',
-                  '". mysqli_escape_string($conn,$email) ."',
-                  '". mysqli_escape_string($conn,$hash) ."',
-                  '". mysqli_escape_string($conn,$adm_no) ."',
-                  '". mysqli_escape_string($conn,$contact) ."') ";
+                mysqli_query($conn,$insert_query) or die(mysqli_error());
 
-                   mysqli_query($conn,$insert_query) or die(mysqli_error());
-
-                   $plan_query = "INSERT INTO plan (adm_no)VALUES('$adm_no')";
-                   mysqli_query($conn,$plan_query);
-
-
-
+                $plan_query = "INSERT INTO plan (adm_no)VALUES('$adm_no')";
+                mysqli_query($conn,$plan_query);
                 ?>
                 <script>
                 var message = "Your account has been made,Please verify it by clicking the activation link that has been send to your email.";
@@ -130,7 +125,7 @@ if(isset($_POST['submit']))
         //     //else part if email dont match the requirments
         //  ?>
 
-             <script> //alert('Wrong email id.'); window.location.href = "index.php";</script>';
+             <script> //alert('Wrong email id.'); window.location.href = "index.php";</script><!-- '; -->
           <?php
 
         //     //header("Location: register_wrong_email.php");
