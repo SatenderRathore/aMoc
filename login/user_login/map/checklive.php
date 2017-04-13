@@ -4,6 +4,7 @@
 session_start();
 //$_SESSION["rank"]=1;
 //$_SESSION["adm"]='u14co010';
+// print_r($_SESSION);
 ?>
   <head>
     <meta charset="utf-8">
@@ -17,7 +18,7 @@ session_start();
 
     <script>
         var rank=<?php echo($_SESSION["rank"]);?>;
-        var adm='<?php echo($_SESSION["adm"]);?>';
+        var adm='<?php echo($_SESSION["login_adm_no"]);?>';
     </script>
 
   </head>

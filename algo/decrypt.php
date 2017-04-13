@@ -38,7 +38,7 @@ function room_no($r_no)
 
         }
 
-        else//for B wing
+        else//for A wing
         {
             $wing = 'A';
 
