@@ -15,11 +15,11 @@
     $mail->Host       = "smtp.gmail.com";
     $mail->SMTPAuth   = true;
     $mail->Port       = 465;
-    $mail->Username   = "roomjugaad@gmail.com";
-    $mail->Password   = "roomjuga@d@395007";
+    $mail->Username   = "railwayapi1@gmail.com";
+    $mail->Password   = "railwayapi";
     $mail->SMTPSecure = 'ssl';
-    $mail->SetFrom('roomjuga@d@395007', 'Room Jugaad');
-    $mail->AddReplyTo("roomjugaad@gmail.com","roomjugaad@gmail.com");
+    $mail->SetFrom('railwayapi', 'Room Jugaad');
+    $mail->AddReplyTo("railwayapi1@gmail.com","railwayapi1@gmail.com");
     $mail->Subject    = $subject;
     //$mail->AddAttachment("fpdf.php");
     $mail->AltBody    = "To view the message, please use an HTML compatible email viewer!";
