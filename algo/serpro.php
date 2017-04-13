@@ -47,7 +47,7 @@ while($rows = mysqli_fetch_array($qry_res,MYSQLI_ASSOC))
 			$for_pdf = 'INSERT INTO pdf(u_name,adm_no,hostel,room_no,email,contact) VALUES("'.$pdf_row['u_name'].'","'.$rows['adm_no'].'","'.$hostel_name.'","'.$room.'","'.$pdf_row['email'].'",'.$pdf_row['contact'].');';
 			$pdf_res = mysqli_query($conn,$for_pdf);
 
-			if($op === false or $pdf_res === false)
+			if($op === false || $pdf_res === false)
 			{
 				$data=array("m" => "Error");
 				print_r(json_encode($data));

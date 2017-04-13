@@ -23,7 +23,7 @@ die('Could not connect: ' . mysqli_error());
 //mysql_select_db($database,$con);
 	$rank=$_GET["rank"];
 	$adm=$_GET["Adm_no"];
-	$qry='INSERT INTO preferences (rank,Adm_No';
+	$qry='INSERT INTO preferences (rank,adm_No';
 	//$res=mysql_query($qry);
 	for($i=1;$i<=7;$i++)
 	{
