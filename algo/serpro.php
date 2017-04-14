@@ -3,7 +3,7 @@
 /*PREFERCENCES(rank,Adm_No,P1,P2,P3,P4,P5,P6,P7,FP)*/
 /* FinalList(rank,Adm_No,RoomNo(in integer code))*/
 session_start();
-include("pdf.php");
+// include("pdf.php");
 include("db.php");
 include("decrypt.php");
 
@@ -23,9 +23,9 @@ $qry_res=mysqli_query($conn,$qry);
 while($rows = mysqli_fetch_array($qry_res,MYSQLI_ASSOC))
 {
 	$adm_no = $rows['adm_no'];
-	$pdf_qry = "SELECT u_name,contact,email FROM details WHERE adm_no = '$adm_no'";//query for pdf
-	$o = mysqli_query($conn,$pdf_qry);
-	$pdf_row = mysqli_fetch_array($o,MYSQLI_ASSOC);
+	// $pdf_qry = "SELECT u_name,contact,email FROM details WHERE adm_no = '$adm_no'";//query for pdf
+	// $o = mysqli_query($conn,$pdf_qry);
+	// $pdf_row = mysqli_fetch_array($o,MYSQLI_ASSOC);
 
 	for($x=1;$x<=7;$x++)
 	{
@@ -44,10 +44,11 @@ while($rows = mysqli_fetch_array($qry_res,MYSQLI_ASSOC))
 			$op = mysqli_query($conn,$qry);
 
 			//insert into pdf table to generate pdf
-			$for_pdf = 'INSERT INTO pdf(u_name,adm_no,hostel,room_no,email,contact) VALUES("'.$pdf_row['u_name'].'","'.$rows['adm_no'].'","'.$hostel_name.'","'.$room.'","'.$pdf_row['email'].'",'.$pdf_row['contact'].');';
-			$pdf_res = mysqli_query($conn,$for_pdf);
+			// $for_pdf = 'INSERT INTO pdf(u_name,adm_no,hostel,room_no,email,contact) VALUES("'.$pdf_row['u_name'].'","'.$rows['adm_no'].'","'.$hostel_name.'","'.$room.'","'.$pdf_row['email'].'",'.$pdf_row['contact'].');';
+			// $pdf_res = mysqli_query($conn,$for_pdf);
 
-			if($op === false || $pdf_res === false)
+			// if($op === false || $pdf_res === false)
+			if($op === false )
 			{
 				$data=array("m" => "Error");
 				print_r(json_encode($data));
@@ -61,7 +62,7 @@ while($rows = mysqli_fetch_array($qry_res,MYSQLI_ASSOC))
 }
 $for_pref = "TRUNCATE TABLE preferences";
 mysqli_query($conn,$for_pref);
-pdf();
+// pdf();
 $data=array("m" => "Process Completes");
 print_r(json_encode($data));
 return json_encode($data);
