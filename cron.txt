@@ -1,0 +1,3 @@
+MAILTO="satenderjpr@gmail.com"
+# This cron job does something very important
+* * * * * /opt/lampp/bin/php /opt/lampp/htdocs/aMoc/algo/serpro.php

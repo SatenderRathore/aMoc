@@ -1,3 +1,5 @@
+<!-- #!/usr/bin/php
+ -->
 <?php
 include("db.php");
 include("decrypt.php");
@@ -30,16 +32,20 @@ for ($r = $rank; $r <= $rank + 6; $r++)
         $final_allot = room_no($f);
         $first_query = "INSERT INTO alloted (adm_no,rank,room_no,enc_no) VALUES ('$adm_no','$rank','$final_allot','$f')";
         $first_output = mysqli_query($conn,$first_query);
-        printf("query = %d",$first_output);
+        // printf("query = %d",$first_output);
     }
 
 }
 
 
-//decoding
+#!/usr/bin/php
+ 
+echo "hello world\n";
+ 
+// ...
+ 
 
 
-//room_no(342);
 ?>
 
 
