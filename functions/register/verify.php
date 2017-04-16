@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>email confirmation</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="display/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <!-- start header div -->
