@@ -24,7 +24,7 @@ if(isset($_POST["submit"])) {
     } else {
         //$_SESSION['wrong_details'] = 1;
 ?>
-    <script> alert('Wrong Details'); window.location.href = "../main/main.php";</script>';
+    <script> alert('Wrong Details'); window.location.href = "../aMoc/index.php";</script>';
 <?php
 //header('Location:index_w.php');
      }
