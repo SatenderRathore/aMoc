@@ -18,3 +18,5 @@ preferences     :     preferences will stored according to rank modulo and table
 
 valid_con       :     it is for valid condidate information who is valid to book room according to their given time schedule
 
+admin details:	username = admin
+				password = qwerty

@@ -1,0 +1,277 @@
+html{
+	background-image: url("../img/nehru.jpg");
+	background-size: 100% 100%;
+}
+body{
+	margin: 0;
+}
+
+#t{
+	position: fixed;
+	top: 0;
+	left:0;
+	font-size: 2em;
+	text-align: center;
+	width: 200px;
+	height: 45px;
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+	display: block;
+}
+
+table{
+	margin-top: 2%;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+/* all hostel headings*/
+
+h1{
+	margin-top: 1%;
+	font-weight:400;
+}
+
+/*..............*/
+
+/* all the links */
+
+a{
+	text-decoration: none;
+	color: #666;
+
+}
+
+a:hover{
+	opacity: 0.5;
+}
+
+/*.............*/
+
+
+/* for side buttons in tagore bhavan */
+
+.left{
+	width: 10%;
+	margin-left: 7%;
+	margin-right:6%;
+	float: left;
+	position: relative;
+	display: inline-block;
+}
+
+.right{
+	width: 11%;
+	margin-right: 6%;
+	float: right;
+	position: relative;
+	display: inline-block;
+}
+
+.button{
+	float: left;
+	width: 80%;
+	height: 60px;
+	margin-top: 210px;
+	margin-left: 12%;
+}
+
+/*................*/
+
+/*for middle buttons in all hostels */
+button{
+	width: 100%;
+	/*height: 100%;*/
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-top: 5%;
+	background: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 3px;
+	color: #666;
+}
+/*...............*/
+
+/* NEHRU BHAVAN */
+.nehru{
+	width: 100%;
+}
+
+.nehru_table{
+	width: 85%;
+	margin-left:auto;
+	margin-right: auto;
+	height: 480px;
+}
+
+#nehru_ground{
+
+	margin: -1% 1% 0 0;
+	background-image: url("../img/nehru.jpg");
+	background-size: 100% 100%;
+}
+#nehru_first{
+	margin: -1% -1% 0 0;
+	background-image: url("../img/nehru.jpg");
+	background-size: 100% 100%;
+}
+#nehru_second{
+	margin: -1% -1% 0 0;
+	background-image: url("../img/nehru.jpg");
+	background-size: 100% 100%;
+	margin-bottom: 0%;
+}
+
+/*............*/
+
+/*TAGORE BHAVAN */
+
+.tagore{
+	width: 100%;
+}
+.tagore_table{
+	width: 60%;
+	margin-right:auto;
+	margin-left: auto;
+	position: relative;
+	display: inline-block;
+	/*height: 480px;*/
+}
+
+
+#tagore_b{
+
+	margin: 0;
+	background-image: url("../img/tagore.jpg");
+	background-size: 100% 100%;
+}
+
+#tagore_a{
+
+	margin: 0;
+	background-image: url("../img/tagore.jpg");
+	background-size: 100% 100%;
+}
+
+/*.................*/
+
+
+/*BHABHA BHAVAN*/
+.bhabha{
+	width: 100%;
+}
+
+.bhabha_table{
+	width: 80%;
+	margin-left:auto;
+	margin-right: auto;
+	height: 480px;
+}
+
+#bhabha_first{
+	margin: -1% -1% 0 0;
+	background-image: url("../img/nehru.jpg");
+	background-size: 100% 100%;
+}
+
+/*....................*/
+
+/* buttons selected */
+
+.available{
+	/*border: 1px solid #ddd;*/
+	text-align: center;
+	font-size: 12px;
+	color: #666;
+	border-radius: 3px;
+	width: 50px;
+	height: 30px;
+	cursor:pointer;
+	background-color: white;
+	margin: 1%;
+}
+
+.selected{
+	text-align: center;
+	font-size: 12px;
+	color: #666;
+	border-radius: 3px;
+	width: 50px;
+	height: 30px;
+	cursor:pointer;
+	background-color: #80CBC4;
+}
+
+.blocked{
+  	text-align: center;
+	font-size: 12px;
+	color: white;
+	border-radius: 3px;
+	width: 50px;
+	height: 30px;
+	cursor: default;
+	pointer-events: none;
+	background-color: #333;
+}
+
+.extra{
+	text-align: center;
+	font-size: 12px;
+	color: black;
+	border-radius: 3px;
+	width: 50px;
+	height: 30px;
+	cursor:default;
+	pointer-events: none;
+	background-color: rgba(221,221,221,0.31);
+}
+
+.space{
+	width: 50px;
+	height: 30px;
+	background-color: #80CBC4;
+
+}
+
+/*..........*/
+
+/*footer*/
+
+footer{
+	margin: 12px auto 0 auto;
+	padding-bottom: 37px;
+	width: 10%;
+}
+
+input{
+	margin-top: 3%;
+	margin-bottom: 3%;
+	width: 100px;
+	height: 30px;
+	border: none;
+	background-color: white;
+	color: #666;
+	cursor: pointer;
+}
+/*..............*/
+
+/* modal */
+.close{
+	float: right;
+	width: 10px;
+}
+.leftbtn{
+	width: 10%;
+	float: left;
+	margin-left:40%;
+}
+.rightbtn{
+
+	width: 10%;
+	float: left;
+}
+
+
+
+/*...........*/
