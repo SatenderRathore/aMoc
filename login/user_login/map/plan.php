@@ -18,7 +18,7 @@ session_start();
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
 
     <script>
-        var rank=<?php echo($_SESSION["rank"]);?>;
+        var rank='<?php echo($_SESSION["rank"]);?>';
         var adm='<?php echo($_SESSION["login_adm_no"]);?>';
     </script>
     <style >
