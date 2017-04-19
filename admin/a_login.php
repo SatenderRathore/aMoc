@@ -5,8 +5,8 @@ if(isset($_POST['submit']))
 {
 session_start();
 {
-    $admin_id=mysql_real_escape_string($_POST["admin_id"]);
-    $pass=mysql_real_escape_string($_POST["password"]);
+    $admin_id=$_POST["admin_id"];
+    $pass=$_POST["password"];
     $pass = md5($pass);
      $query = "SELECT admin_id FROM admin WHERE admin_id='$admin_id' AND password='$pass'";
      printf("query = %d",$query);

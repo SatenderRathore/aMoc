@@ -4,6 +4,7 @@
 session_start();
 //$_SESSION["rank"]=1;
 //$_SESSION["adm"]='u14co010';
+// print_r($_SESSION);
 ?>
   <head>
     <meta charset="utf-8">

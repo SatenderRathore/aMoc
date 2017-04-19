@@ -21,6 +21,7 @@ while($rows = mysqli_fetch_array($qry_res,MYSQLI_ASSOC))
 	// $pdf_qry = "SELECT u_name,contact,email FROM details WHERE adm_no = '$adm_no'";//query for pdf
 	// $o = mysqli_query($conn,$pdf_qry);
 	// $pdf_row = mysqli_fetch_array($o,MYSQLI_ASSOC);
+
 	for($x=1;$x<=7;$x++)
 	{
 		$y=$rows['p'.$x];               /*Choosing priority No. for $x=1, 'P'.$x = 'P1'*/
@@ -39,6 +40,7 @@ while($rows = mysqli_fetch_array($qry_res,MYSQLI_ASSOC))
 			//insert into pdf table to generate pdf
 			// $for_pdf = 'INSERT INTO pdf(u_name,adm_no,hostel,room_no,email,contact) VALUES("'.$pdf_row['u_name'].'","'.$rows['adm_no'].'","'.$hostel_name.'","'.$room.'","'.$pdf_row['email'].'",'.$pdf_row['contact'].');';
 			// $pdf_res = mysqli_query($conn,$for_pdf);
+
 			// if($op === false || $pdf_res === false)
 			if($op === false )
 			{
