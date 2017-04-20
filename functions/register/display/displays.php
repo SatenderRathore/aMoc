@@ -11,7 +11,7 @@
 	<body>
 
 		<div id="display-success">
-			<img src="correct.png" alt="Success" /> Your message was sent successfully.
+			<img src="correct.png" alt="Success" /> Your account has been activated successfully.
 		</div>
 		<center>
 		<a href="../../../index.php" alt="login_page">click here to login</a>
